@@ -1,0 +1,19 @@
+{
+  "name": "jsshell",
+  "version": "1.6",
+  "description": "Interactive Javascript with jQuery and jLinq",
+  "background_page": "background.html",
+  "browser_action": {
+    "default_icon": "icon.png",
+	"default_title": "jsshell - Interactive Javascript with jQuery and jLinq"
+  },
+  "content_scripts":[{
+	"matches": ["http://*/*", "https://*/*" ],
+	"js": [ "library.js", "jsshell.js" ],
+	"run_at": "document_end",
+	"all_frames": false
+  }],
+  "permissions": [
+    "tabs"
+  ]
+}
